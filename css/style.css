@@ -1,0 +1,599 @@
+* {
+   box-sizing: border-box;
+   margin: 0; 
+}
+
+/*hop ned til hovedindhold. kode fra https://www.a11y-collective.com/blog/skip-to-main-content/*/
+.screen-reader-text {
+  position: absolute; /*Positions the link absolutely on the page, allowing it to be placed anywhere.*/
+  left: -9999px; /*Moves the link far off-screen to the left, making it invisible to sighted users.*/
+  z-index: 999; /*Sets a high z-index, ensuring that the link will be on top of other page elements if it becomes visible.*/
+  padding: 1em;
+  background-color: black;
+  color: white;
+  opacity: 0; /*Sets the link's opacity to 0, making it fully transparent and invisible.*/
+}
+ 
+.screen-reader-text:focus {
+  left: 50%; /* When the link receives focus (e.g., when a keyboard user tabs to it), it is repositioned horizontally to the centre of the screen.*/
+  transform: translateX(-50%); /*This centres the link horizontally by moving it back to the left by 50% of its own width.*/
+  opacity: 1; /*The link's opacity is set to 1, making it fully visible.*/
+}
+
+
+
+
+/*generel styling*/
+body{
+    background-color: #F9F0E6;
+    font-family: Amaranth;
+    font-size: 16px;
+}
+h1{
+    font-family: Rochester;
+    font-size: 48px;
+}
+
+h2{
+    font-family: "playfair display";
+    font-size: 26px;
+}
+
+h3{
+    font-family: "playfair display";
+    font-size: 20px;
+}
+
+h4{ 
+    font-family: "playfair display";
+    font-size: 25px;
+    font-weight: 400;
+}
+.button{
+    background-color: #6F7E6B;
+    color: white;
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 40px;
+    font-size: 18px;
+    max-width: max-content;  
+}
+
+.button:hover{
+    color: white;
+    background-color: #E3C6C1;
+}
+
+.playfair{
+    font-family: "playfair display";
+    font-size: 32px;
+}
+.headercover{
+    background-image: url("/img/banner.png");
+    background-size: cover;
+    background-position: center;
+    /*min-height: 395px;*/
+    padding-top: 2.5rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    min-width: 100%;
+    p, h2{
+        max-width: 55%;
+        padding: 1rem 0 0 0;
+    }
+    p{
+        margin-bottom: 2em;
+    }
+    a{
+        margin-bottom: 0.5em;
+        display: block;
+    }
+    h1{
+        margin-top: 1em;
+    }
+    .headkontakt{
+    font-family: rochester;
+    font-size: 48px;
+    margin: 1em 0 0 0;
+    
+}
+    
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #6F7E6B;
+}
+
+/*navigation*/
+
+ header:nth-of-type(1) {
+      display: inline;
+    }
+    nav {
+      color: #010f13;
+      background-color: #F9F0E6;
+      height: 4em;
+      padding: 1em;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      img{
+        max-height: 4em;
+      }
+    }
+    nav #bars {
+      display: flex;
+      border: none;
+      background-color: transparent;
+      font-size: 2.3em;
+      color: black;
+      cursor: pointer;
+    }
+
+    nav ul {
+      display: none;
+      height: auto;
+      /*border-top: 4px solid #2e7386;*/
+      flex-direction: column;
+    }
+    nav ul li {
+      display: flex;
+      justify-content: center;
+      
+    }
+
+   .search {
+    background-color: #F9F0E6;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-bottom: 1em;
+    text-align: center;
+   }
+
+    nav a {
+        color: black;
+        padding: 0.5em;
+        margin: 0.5em;
+        font-size: 20px;    
+        font-weight: normal;
+        text-decoration: none;
+    
+    }
+
+    nav a.active{
+        color: #6F7E6B;
+        text-decoration: underline;
+    }
+ 
+    nav .show {
+      display: flex;
+      position: absolute;
+      top: 4em;
+      right: 0;
+      padding: 0;
+      width: 100%;
+      z-index: 1;
+      background-color: #F9F0E6;
+      border-bottom: 4px solid #E3C6C1;
+    }
+      
+
+/*hel projekt hovedindhold*/
+
+.fordele{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 1em 0;
+    
+} 
+
+.fordel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.icon{
+    max-width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.fordel-tekst p{
+font-size: 1.2em; 
+font-family: agdasima;   
+    
+
+}
+.projekt-container{
+     background-color: #E3C6C1;
+  padding: 25px 20px;
+    
+}
+.projekter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.projekt-container h2{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.projekt-kort{
+    background-color: #F9F0E6;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+}
+
+.projekt-kort img{
+    width: 100%;
+    min-height: 200px;  
+    object-fit: cover;
+    display: block;
+}
+
+.projekt-tekst{
+    padding: 10px;
+    min-height: 95px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projekt-tekst p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    padding-right: 25px;
+}
+
+/*Den runde pil*/
+.pil {
+    background-color: #6F7E6B; 
+    color: white;
+    text-decoration: none;  
+
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    align-self: flex-end;
+    margin-top: auto;
+}
+
+.pil:hover{
+    color: white;
+    background-color: #E3C6C1;
+}
+
+
+/*footer*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    margin: 1em;
+
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    img{
+        max-height: 4em;
+        max-width: 110px;
+    }
+    address{
+        margin: 0.5em 0;
+    }
+}
+.sociale-medier{
+  display: flex;
+  justify-content: end;
+  padding: 1em 2em;
+  gap: 15px;
+}
+
+.social-icon{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+/*Guide*/
+
+.niveau{
+    display: flex;
+     justify-content: space-around;
+     margin: 1em;
+    
+    img{
+        width: 80px;
+        height: auto;
+
+}
+
+   }
+    .kortfortalt-container{
+        background-color: #E3C6C1;
+    }
+
+.kortfortalt{
+    background-color: #E3C6C1;
+    padding: 1em;
+   
+    h2{
+        padding-bottom: 1em;
+    }
+
+    p{
+        padding-bottom: 1em;
+    }
+
+    a{
+        margin-bottom: 1em;
+        display: inline-block;
+    }
+    
+    div:nth-child(2){
+        width: 100%;
+        text-align: center;
+        img{
+        max-width: 80% ;
+        border-radius: 12px;
+        }
+    }
+    
+}
+
+.ikoner-container{
+    background-color: #E3C6C1;
+}
+
+.ikoner{
+    background-color: #E3C6C1;
+    padding: 1em;
+    h3{
+        padding-bottom: 1em;
+    }
+    .brugsikoner{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+      
+        
+        img{
+            border-radius: 12px;
+            margin: 1em;
+            
+        }
+    }
+}
+
+.vejledning-container{
+    background-color: #F9F5f0;
+}
+
+.vejledning{
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F5F0;
+    div{
+        max-width: 100%;
+        padding: 1em 1em 0 1em;
+        display: flex;
+        align-items: center;
+        gap: 1em;
+        margin-bottom: 1em;
+        .tal{
+            background-color: #E3C6C1; 
+            color: black;
+            text-decoration: none;  
+
+            min-width: 40px;
+            height: 40px;
+            border-radius: 50%;
+
+            
+            font-size: 25px;
+            font-weight: lighter;
+            text-align: center;
+            padding-top: 2px;
+           
+
+        }
+      
+    }   
+
+}
+  .vejledningbilleder{
+    display: flex;
+    flex-direction: column;
+    background-color: #F9F5F0;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    img{
+        border-radius: 12px; 
+        max-width: 200px; 
+    }
+  }
+
+  .ctahent{
+    background-color: #F9F5F0;
+    padding: 2em 0;
+    text-align: center;
+  }
+
+
+
+
+/*kontaktform/kontaktside*/
+
+
+.kontakt-container{
+    background-color: #F9F5F0;
+    padding: 5% 0;
+}
+.kontaktform {
+    border-radius: 5px;
+    background-color: #E3C6C1;
+    padding: 1.3em;
+    /*margin: 5% auto;*/ 
+
+
+p{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+
+input[type=text], input[type=email], input[type=tlf], select, textarea{
+   width: 100%;
+   padding: 1em;
+   border: 1px solid #AD8E78;
+   border-radius: 4px;
+   margin-top: 0.5em;
+   margin-bottom: 1em;
+}
+
+select, input[type=radio], input[type=submit]{
+    cursor: pointer;
+}
+
+fieldset{
+    border-color: #AD8E78;
+    border-style: solid;
+    margin-top: 0.8em;  
+}
+
+ input[type=submit]{
+    background-color: #6F7E6B;
+    color: white;
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 40px;
+    
+    font-size: 18px;
+    margin: 10px auto;
+    text-align: center;
+ }
+
+ .submit{
+    text-align: center;
+    width: 100%;
+ }
+}
+
+ @media screen and (min-width: 769px) {
+
+    body{
+        font-size: 20px;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav #bars {
+        display: none;
+    }
+
+    .fordele{
+        flex-direction: row;
+        justify-content: space-between;
+        padding-right: 2em;
+    }
+
+    .projekter{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+
+    .search{
+        margin-top: 1em;
+        border-color: #AD8E78;
+}
+.fordele, .projekter, footer, .kontaktform, .kortfortalt, .ikoner, .vejledning{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ 
+footer{
+    flex-direction: row;
+    justify-content: space-between;
+
+    img{
+        margin-left: 1em;
+    }
+}
+
+.kortfortalt{
+    display: flex;
+    flex-direction: row;
+
+     div{
+        max-width: 50%;
+     }
+
+     img{
+        margin-top: 3em;
+        margin-left: 3em;
+     }
+
+}
+
+.ikoner {
+    .brugsikoner{
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+
+    max-width: 50%;
+}
+}
+.vejledning{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    
+
+    a{
+        margin-left: 1em;
+    }
+}
+
+.vejledningbilleder{
+    flex-direction: row;
+    justify-content: center;
+
+    img{
+        max-width: 400px;
+        width: 400px;
+    }
+
+}
+    
+ }

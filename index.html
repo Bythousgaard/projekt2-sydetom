@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Upcykling</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/0db6f5d019.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Rochester&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">
+            <img src="img/Hånd og hjertelogo.png" alt="logo">
+            </a>
+            <!--navigation-->
+            <!--bars-->
+            <button 
+            id="bars"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="open navigation"
+            >
+            <!-- aria-expanden fortæller skærmoplæseren at menuen er lukket-->
+            <!--aria-label giver skærmlæseren en besked om hvad knappen gør, det er det skærmlæseren læser op-->
+            <!--button gør menuen trykbar så den kan åbnes via tastatur-->
+            <!--aria-controls fortæller skærmoplæseren at menuen er styret af knappen-->
+            <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!--navigation-->
+
+            <ul id="menu">
+             <!-- id="menu" references the button with aria-controls -->
+              <li><a class="active" href="/">Forside</a></li>
+              <li><a href="/guide.html">Guide</a></li>
+              <li><a href="/kontakt.html">Kontakt</a></li>
+              <li>
+                <form action="#">
+                    <input class="search" type="text" placeholder="Søg" name="Søg">
+                </form>
+              </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="headercover">
+            <h1>Sy det om</h1>
+            <h2>Fra gammelt sengetøj til nye favoritter</h2>
+            <p>Find inspiration og enkle syvejledninger og ideer til hvordan du kan give brugte tekstiler nyt liv. Små projekter. Store fordele for miljøet.</p>
+            <a class="button" href="guide.html">Se guide</a>
+        </section>
+
+        <section class="fordele">
+            
+            <div class="fordel">
+            <img class="icon" src="img/blad2.png" alt="">
+            
+
+            <div class="fordel-tekst">
+            <h4>Bæredygtigt</h4>
+            <p>Giv brugte tekstiler nyt liv</p>
+            </div>
+            </div>
+
+            <div class="fordel">
+                <img class="icon" src="img/sytrådhjerte.png" alt="icon sytråd">
+            
+            <div class="fordel-tekst">
+                <h4>Kreativt</h4>
+                <p>Skab noget unikt</p>
+            </div>
+
+            </div>
+
+            <div class="fordel">
+                <img class="icon" src="img/blomstbrun.png" alt="icon blomst">
+            
+            <div class="fordel-tekst">
+                <h4>Enkle projekter</h4>
+                <p>Nemme guides med tydelige trin</p> 
+            </div>
+
+            </div>
+            
+        </section>
+
+
+        <section class="projekt-container" >
+            <h2>Populære nemme projekter</h2>
+
+            <div class="projekter">
+           
+            <div class="projekt-kort">
+            <img src="img/mulepose.png" alt="billed af mulepose i blomstret sengetøj">
+        
+            <div class="projekt-tekst">
+            <h3>Indkøbsnet</h3>
+            <p>Et nemt projekt med stor effekt. Sy dit eget indkøbsnet af et gammelt sengesæt</p>
+            <a href="/guide.html" class="pil">-></a>
+            </div>
+            </div>
+
+            <div class="projekt-kort">
+                <img src="img/scrunchie.png" alt="billed af scrunchie i blomstret sengetøj">
+              <div class="projekt-tekst">
+                <h3>scrunchie</h3>
+                <p>Brug stofrester til fine scrunchies. Et perfekt  begynderprojekt</p>
+                <a href="#" class="pil">-></a>
+              </div>
+
+            </div>
+
+            <div class="projekt-kort">
+                <img src="img/viskestykker.png" alt="viskestykker i blomstret sengetøj">
+                <div class="projekt-tekst">
+                <h3>Viskestykke</h3>
+                <p>Fra drømme til opvask. sy fnugfrie og bløde viskestykker med god sugeevne</p>
+                <a href="#" class="pil">-></a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <a href="/">
+        <img src="img/Hånd og hjertelogo.png" alt="Logo">
+        </a>
+        
+        <div>
+        <address>Amtsvejen 8, 7200 Grindsted</address>
+        <a href="tel:40980007">Ring til mig</a>
+        <a href="mailto:lindast1983@gmail.com">Send mig en mail</a>
+        </div>
+
+       <Section class="sociale-medier">
+        <div class="social-icon">
+            <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+            </a>
+            <p>Facebook</p>
+        </div>
+
+        <div class="social-icon">
+            <a href="#">
+             <i class="fa-brands fa-instagram"></i>
+            </a>
+             <p>Instagram</p>
+        </div>
+
+        <div class="social-icon">
+           <a href="#">
+            <i class="fa-brands fa-tiktok"></i>
+           </a>
+            <p>Tiktok</p>
+
+        </div>
+        
+    </Section>
+
+
+        
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Upcykling</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/0db6f5d019.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Rochester&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">
+            <img src="img/Hånd og hjertelogo.png" alt="logo">
+            </a>
+            <!--navigation-->
+            <!--bars-->
+            <button 
+            id="bars"
+            aria-expanded="false"
+            aria-controls="menu"
+            aria-label="open navigation"
+            >
+            <!-- aria-expanden fortæller skærmoplæseren at menuen er lukket-->
+            <!--aria-label giver skærmlæseren en besked om hvad knappen gør, det er det skærmlæseren læser op-->
+            <!--button gør menuen trykbar så den kan åbnes via tastatur-->
+            <!--aria-controls fortæller skærmoplæseren at menuen er styret af knappen-->
+            <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!--navigation-->
+
+            <ul id="menu">
+             <!-- id="menu" references the button with aria-controls -->
+              <li><a href="/">Forside</a></li>
+              <li><a href="/guide.html">Guide</a></li>
+              <li><a class="active" href="/kontakt.html">Kontakt</a></li>
+              <li>
+                <form action="#">
+                    <input class="search" type="text" placeholder="Søg" name="Søg">
+                </form>
+              </li>
+            </ul>
+        </nav>
+    </header>
+    <!--<header>
+        <nav>
+        <img src="" alt="logo">
+        <i class="fa-solid fa-bars"></i>
+         <section class="headercover">
+            <h1>Kontakt</h1>
+            <h2></h2>
+            <p>Har du spørgsmål, ideer til nye projekter eller feedback? Så er du meget velkommen til at skrive til mig.</p>
+            <a class="button" href="Guide.html">Se guide</a>
+        </section>
+        </nav>
+    </header>-->
+
+    <!--kontaktformular - hovedindhold-->
+
+    <main >
+        <section class="headercover">
+            <p class="headkontakt">Kontakt</p>
+            <p>Har du spørgsmål, ideer til nye projekter eller feedback? Så er du meget velkommen til at skrive til mig.</p>
+            <a class="button" href="guide.html">Se guide</a>
+        </section>
+       
+        <section class="kontakt-container" >
+            <div class="kontaktform">
+        <h1>Kontakt mig gerne</h1>
+        <p class="kontakt-tekst">Skriv gerne med spørgsmål eller ideer til nye syprojekter</p>
+        <form>
+            <label for="navn">Dit navn</label>
+            <input id="navn" type="text" required>
+
+            <label for="email">Din email</label>
+            <input id="email" type="email">
+
+            <label for="tlf">Dit telefonnummer</label>
+            <input id="tlf" type="tlf">
+
+
+            <!--besked område-->
+
+            <label for="besked">Skriv din besked her</label>
+            <textarea id="besked" cols="30" rows="10"></textarea>
+
+            <fieldset>Må jeg kontakte dig på email</legend>
+
+            <input id="ja" type="radio" name="kontakt">
+            <label for="ja">Ja</label>
+
+            <input id="nej" type="radio" name="kontakt">
+            <label for="nej">Nej</label>
+            </fieldset>
+
+            <fieldset>Må jeg kontakte dig på telefon</legend>
+
+            <input id="ja" type="radio" name="kontakt">
+            <label for="ja">Ja</label>
+
+            <input id="nej" type="radio" name="kontakt">
+            <label for="nej">Nej</label>
+            </fieldset>
+
+            <div class="submit">
+                <input type="submit" name="submit" value="Send besked">
+            </div>    
+            </form>
+            </div>
+            </section>
+       
+    </main>
+     <footer>
+        <a href="/">
+        <img src="img/Hånd og hjertelogo.png" alt="Logo">
+        </a>
+        
+        <div>
+        <address>Amtsvejen 8, 7200 Grindsted</address>
+        <a href="tel:40980007">Ring til mig</a>
+        <a href="mailto:lindast1983@gmail.com">Send mig en mail</a>
+        </div>
+
+       <Section class="sociale-medier">
+        <div class="social-icon">
+            <a href="#">
+            <i class="fa-brands fa-facebook"></i>
+            </a>
+            <p>Facebook</p>
+        </div>
+
+        <div class="social-icon">
+            <a href="#">
+             <i class="fa-brands fa-instagram"></i>
+            </a>
+             <p>Instagram</p>
+        </div>
+
+        <div class="social-icon">
+           <a href="#">
+            <i class="fa-brands fa-tiktok"></i>
+           </a>
+            <p>Tiktok</p>
+
+        </div>
+        
+    </Section>
+
+
+        
+    </footer>
+</body>
+</html>
